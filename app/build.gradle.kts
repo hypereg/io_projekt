@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "pl.betterdziekanat.betterdziekanat"
+    namespace = "com.example.myapplication"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "pl.betterdziekanat.betterdziekanat"
+        applicationId = "com.example.myapplication"
         minSdk = 35
         targetSdk = 35
         versionCode = 1
