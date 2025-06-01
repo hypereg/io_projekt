@@ -18,7 +18,16 @@ public class ApiRouter {
         app.put("/api/sale/:id", SalaController::update);
 
         app.get("/api/zajecia", ZajeciaController::getAll);
-        app.get("/api/dokumenty", EdokumentController::getAll);
+
+        app.get("/api/edokumenty", EdokumentController::getAll);
+        app.get("/edokumenty", EdokumentController::getAll);
+        app.post("/edokumenty", EdokumentController::create);
+        app.get("/edokumenty/:id", EdokumentController::getById);
+        app.put("/edokumenty/:id", EdokumentController::update);
+        app.delete("/edokumenty/:id", EdokumentController::delete);
+        app.get("/edokumenty/uzytkownik/:uzytkownik_id", EdokumentController::getByUserId);
+        app.get("/edokumenty/search", EdokumentController::searchByTitle);
+        app.get("/edokumenty/recent", EdokumentController::getRecentDocuments);
 
         app.get("/api/oceny", OcenaController::getAll);
         app.post("/api/oceny", OcenaController::create);
