@@ -143,10 +143,11 @@ public class EdokumentController {
     }
 
     public static void getRecentDocuments(Context ctx) throws SQLException {
+        int days = Integer.parseInt(ctx.pathParam("days"));
         List<Map<String, Object>> list = new ArrayList<>();
         try (Connection conn = Database.getDataSource().getConnection();
              PreparedStatement ps = conn.prepareStatement(
-                     "SELECT * FROM E_dokumenty WHERE data_utworzenia >= NOW() - INTERVAL '7 DAYS'")) {
+                     "SELECT * FROM E_dokumenty WHERE data_utworzenia >= NOW() - INTERVAL " + days + " DAYS")) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Map<String, Object> doc = new HashMap<>();

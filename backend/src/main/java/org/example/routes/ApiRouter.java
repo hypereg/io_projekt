@@ -27,7 +27,7 @@ public class ApiRouter {
         app.delete("/edokumenty/:id", EdokumentController::delete);
         app.get("/edokumenty/uzytkownik/:uzytkownik_id", EdokumentController::getByUserId);
         app.get("/edokumenty/search", EdokumentController::searchByTitle);
-        app.get("/edokumenty/recent", EdokumentController::getRecentDocuments);
+        app.get("/edokumenty/recent/:days", EdokumentController::getRecentDocuments);
 
         app.get("/api/oceny", OcenaController::getAll);
         app.post("/api/oceny", OcenaController::create);
