@@ -16,10 +16,17 @@ public class ApiRouter {
         app.delete("/api/sale/:id", SalaController::delete);
         app.get("/api/sale/:id", SalaController::getById);
         app.put("/api/sale/:id", SalaController::update);
-        
+
         app.get("/api/zajecia", ZajeciaController::getAll);
         app.get("/api/dokumenty", EdokumentController::getAll);
+
         app.get("/api/oceny", OcenaController::getAll);
+        app.post("/api/oceny", OcenaController::create);
+        app.get("/api/oceny/:id", OcenaController::getById);
+        app.put("/api/oceny/:id", OcenaController::update);
+        app.delete("/api/oceny/:id", OcenaController::delete);
+        app.get("/api/oceny/srednia/:student_zajecia_id", OcenaController::getAverage);
+        app.get("/api/oceny/srednia", OcenaController::getOverallAverage);
 
         app.post("/api/login", AuthController::login);
     }
