@@ -37,6 +37,9 @@ public class ApiRouter {
         app.get("/api/oceny/srednia/:student_zajecia_id", OcenaController::getAverage);
         app.get("/api/oceny/srednia", OcenaController::getOverallAverage);
 
+        app.post("/api/register", AuthController::register);
         app.post("/api/login", AuthController::login);
+        app.get("/auth/verify", AuthController::verifyToken);
+
     }
 }
