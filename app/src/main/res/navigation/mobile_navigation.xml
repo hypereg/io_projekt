@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navigation_menu"
-        android:name="com.example.myapplication.ui.dashboard.DashboardFragment"
+        android:name="com.example.myapplication.ui.oceny.OcenyFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 </navigation>

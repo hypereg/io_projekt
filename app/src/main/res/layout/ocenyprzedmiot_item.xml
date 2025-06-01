@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/kafelek_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/smallkafelek"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ocenyprzedmiot_przedmiot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Technologie informacyjne A"
+                android:layout_gravity="start"
+                style="@style/ItemTitle"/>
+
+            <TextView
+                android:id="@+id/ocenyprzedmiot_oceny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4 4 5 6 5 4"
+                style="@style/ItemOpis"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ocenyprzedmiot_srednia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4,75"
+            style="@style/GradeText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ocenyprzedmiot_szczegoly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingTop="10dp"/>
+</LinearLayout>

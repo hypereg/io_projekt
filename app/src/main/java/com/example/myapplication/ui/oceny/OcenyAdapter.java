@@ -37,7 +37,7 @@ public class OcenyAdapter extends RecyclerView.Adapter<OcenyAdapter.OcenaViewHol
     @Override
     public OcenaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.ocena_item, parent, false); // ← tutaj wskazujesz layout
+                .inflate(R.layout.ocena_item, parent, false);
         return new OcenaViewHolder(view);
     }
 
@@ -45,7 +45,7 @@ public class OcenyAdapter extends RecyclerView.Adapter<OcenyAdapter.OcenaViewHol
     public void onBindViewHolder(@NonNull OcenaViewHolder holder, int position) {
         Ocena ocena = listaOcen.get(position);
         holder.przedmiot.setText(ocena.getPrzedmiot());
-        holder.wartosc.setText(ocena.getWartosc());
+        holder.wartosc.setText(String.valueOf(ocena.getWartosc()));
         holder.data.setText(ocena.getData());
     }
 
