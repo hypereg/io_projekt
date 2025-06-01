@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class JwtUtil {
     private static final String SECRET_KEY = "betterdziekanat123";
-    private static final long EXPIRATION_TIME = 86400000;
+    private static final long EXPIRATION_TIME = 86400000; // 1 dzień
 
     public static String generateToken(String email) {
         return Jwts.builder()
@@ -28,7 +28,7 @@ public class JwtUtil {
         }
     }
 
-    public static String getEmailFromToken(String token) {
+    public static String getEmailFromToken(String token) { // uzyskiwanie email poprzez token
         Claims claims = Jwts.parser()
                 .setSigningKey(SECRET_KEY)
                 .parseClaimsJws(token)
