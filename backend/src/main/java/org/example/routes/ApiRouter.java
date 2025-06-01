@@ -11,7 +11,12 @@ public class ApiRouter {
         app.put("/api/uzytkownicy/:id", UserController::update);
         app.delete("/api/uzytkownicy/:id", UserController::delete);
 
+        app.post("/api/sale", SalaController::create);
         app.get("/api/sale", SalaController::getAll);
+        app.delete("/api/sale/:id", SalaController::delete);
+        app.get("/api/sale/:id", SalaController::getById);
+        app.put("/api/sale/:id", SalaController::update);
+        
         app.get("/api/zajecia", ZajeciaController::getAll);
         app.get("/api/dokumenty", EdokumentController::getAll);
         app.get("/api/oceny", OcenaController::getAll);
