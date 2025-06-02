@@ -1,29 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/kafelek_container"
+    android:id="@+id/kafelek_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/smallkafelek"
-    android:padding="10dp"
-    android:layout_marginBottom="10dp">
+    android:padding="10dp">
 
     <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="top">
-
-        <LinearLayout
-            android:layout_width="45dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:gravity="center">
-            <ImageView
-                android:id="@+id/bell"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/bell" />
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -32,34 +20,34 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/ocena_przedmiot"
+                android:id="@+id/ocenyprzedmiot_przedmiot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Matematyka"
+                android:text="Technologie informacyjne A"
+                android:layout_gravity="start"
                 style="@style/ItemTitle"/>
 
             <TextView
-                android:id="@+id/ocena_data"
+                android:id="@+id/ocenyprzedmiot_oceny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Data"
+                android:text="4 4 5 6 5 4"
                 style="@style/ItemOpis"/>
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/arrow"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/arrow_right"
-            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/ocenyprzedmiot_srednia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="4,75"
+            style="@style/GradeText"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/ocena_message"
+    <LinearLayout
+        android:id="@+id/ocenyprzedmiot_szczegoly"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tutaj wiadomość"
+        android:orientation="vertical"
         android:visibility="gone"
-        android:padding="16dp"/>
+        android:paddingTop="10dp"/>
 </LinearLayout>

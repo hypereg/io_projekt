@@ -3,13 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_dashboard">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.myapplication.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_plan"
+        android:name="com.example.myapplication.ui.plan.PlanFragment"
+        android:label="@string/title_plan"
+        tools:layout="@layout/fragment_plan" />
+
+    <fragment
+        android:id="@+id/navigation_mail"
+        android:name="com.example.myapplication.ui.plan.PlanFragment"
+        android:label="@string/title_mail"
+        tools:layout="@layout/fragment_mail" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -18,8 +24,14 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.myapplication.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_zad"
+        android:name="com.example.myapplication.ui.zadania.ZadaniaFragment"
+        android:label="@string/title_zad"
+        tools:layout="@layout/fragment_zadania" />
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.myapplication.ui.oceny.OcenyFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>

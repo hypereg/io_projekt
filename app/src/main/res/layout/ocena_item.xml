@@ -4,8 +4,7 @@
     android:orientation="horizontal"
     android:background="@drawable/smallkafelek"
     android:padding="10dp"
-    android:gravity="top"
-    android:layout_marginBottom="10dp">
+    android:gravity="top">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -17,14 +16,12 @@
             android:id="@+id/ocena_przedmiot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Matematyka"
             style="@style/ItemTitle"/>
 
         <TextView
             android:id="@+id/ocena_data"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data"
             style="@style/ItemOpis"/>
     </LinearLayout>
 
@@ -32,6 +29,5 @@
         android:id="@+id/ocena_wartosc"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="5.0"
-        style="@style/GradeText"/> />
+        style="@style/GradeText"/>
 </LinearLayout>

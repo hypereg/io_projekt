@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:id="@+id/kafel_oceny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bigkafelek"
+            android:padding="15dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nowe oceny"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ocenyRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kafel_ogloszenia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bigkafelek"
+            android:padding="15dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ogłoszenia"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ogloszeniaRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kafel_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bigkafelek"
+            android:padding="15dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan zajęć"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
