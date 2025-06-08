@@ -8,9 +8,9 @@
         android:icon="@drawable/calendar"
         android:title="@string/title_plan" />
     <item
-        android:id="@+id/navigation_mail"
+        android:id="@+id/navigation_wiadomosc"
         android:icon="@drawable/mail"
-        android:title="@string/title_mail" />
+        android:title="@string/title_wiadomosc" />
     <item
         android:id="@+id/navigation_zadania"
         android:icon="@drawable/square"

@@ -54,7 +54,7 @@ public class ZadanieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         if (viewType == TYPE_HEADER) {
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.zadanie_section_header, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.date_section_header, parent, false);
             return new HeaderViewHolder(v);
         } else {
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.zadanie_item, parent, false);

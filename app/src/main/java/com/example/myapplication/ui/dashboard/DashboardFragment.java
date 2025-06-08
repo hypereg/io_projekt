@@ -1,5 +1,4 @@
 package com.example.myapplication.ui.dashboard;
-
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -12,39 +11,29 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.graphics.Rect;
-
 import com.example.myapplication.databinding.FragmentDashboardBinding;
 import com.example.myapplication.ui.oceny.Ocena;
 import com.example.myapplication.ui.oceny.OcenyAdapter;
 import com.example.myapplication.ui.wiadomosc.Wiadomosc;
-import com.example.myapplication.ui.wiadomosc.WiadomoscAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class DashboardFragment extends Fragment {
-
     private FragmentDashboardBinding binding;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         DashboardViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(DashboardViewModel.class);
-
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         RecyclerView recyclerViewOceny = binding.ocenyRecyclerView;
         recyclerViewOceny.setLayoutManager(new LinearLayoutManager(getContext()));
-
         List<Ocena> lista = new ArrayList<>();
         lista.add(new Ocena("Matematyka", 5.0, "2024-05-10", "Kolos 1"));
         lista.add(new Ocena("Programowanie", 4.5, "2024-05-08", "Projekt"));
         lista.add(new Ocena("Ekonomia", 4.0, "2024-05-01", "Aktywnosc"));
-
         OcenyAdapter adapter = new OcenyAdapter(lista);
         recyclerViewOceny.setAdapter(adapter);
-
         recyclerViewOceny.addItemDecoration(new RecyclerView.ItemDecoration() {
             @Override
             public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
@@ -57,7 +46,7 @@ public class DashboardFragment extends Fragment {
             }
         });
 
-        RecyclerView recyclerViewOgloszenia = binding.ogloszeniaRecyclerView;
+        RecyclerView recyclerViewOgloszenia = binding.wiadomosciRecyclerView;
         recyclerViewOgloszenia.setLayoutManager(new LinearLayoutManager(getContext()));
 
         List<Wiadomosc> listaOgloszen = new ArrayList<>();
@@ -71,17 +60,15 @@ public class DashboardFragment extends Fragment {
         listaOgloszen.add(new Wiadomosc("Sekretariat", "Nowe legitymacje", "Odbiór nowych legitymacji studenckich w pokoju 14.", "ogloszenie", "2024-06-04"));
         listaOgloszen.add(new Wiadomosc("Biblioteka", "Zwrot książek", "Prosimy o zwrot wypożyczonych książek do końca semestru.", "ogloszenie", "2024-06-04"));
         listaOgloszen.add(new Wiadomosc("Samorząd", "Piknik studencki", "W piątek 14 czerwca organizujemy piknik – zapraszamy wszystkich studentów!", "ogloszenie", "2024-06-05"));
-        WiadomoscAdapter ogloszeniaAdapter = new WiadomoscAdapter(listaOgloszen);
+
+        com.example.myapplication.ui.wiadomosc.WiadomoscAdapter ogloszeniaAdapter = new com.example.myapplication.ui.wiadomosc.WiadomoscAdapter(listaOgloszen);
         recyclerViewOgloszenia.setAdapter(ogloszeniaAdapter);
-
-
 
 
 //        final TextView textView = binding.textDashboard;
 //        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

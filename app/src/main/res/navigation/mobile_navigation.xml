@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_plan" />
 
     <fragment
-        android:id="@+id/navigation_mail"
+        android:id="@+id/navigation_wiadomosc"
         android:name="com.example.myapplication.ui.wiadomosc.WiadomoscFragment"
-        android:label="@string/title_mail"
-        tools:layout="@layout/fragment_mail" />
+        android:label="@string/title_wiadomosc"
+        tools:layout="@layout/fragment_wiadomosc" />
 
     <fragment
         android:id="@+id/navigation_dashboard"

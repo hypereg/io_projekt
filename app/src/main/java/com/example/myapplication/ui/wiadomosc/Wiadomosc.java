@@ -1,5 +1,8 @@
 package com.example.myapplication.ui.wiadomosc;
 
+/**
+ * Reprezentuje pojedynczą wiadomość lub ogłoszenie.
+ */
 public class Wiadomosc {
     private String sender;
     private String title;
@@ -16,17 +19,14 @@ public class Wiadomosc {
     }
 
     public String getSender() {
-
         return sender;
     }
 
     public String getTitle() {
-
         return title;
     }
 
     public String getMessage() {
-
         return message;
     }
 
@@ -38,4 +38,3 @@ public class Wiadomosc {
         return data;
     }
 }
-
