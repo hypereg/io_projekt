@@ -26,6 +26,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_oceny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nowe oceny"
@@ -52,6 +53,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_wiadomosci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wiadomości"
@@ -78,6 +80,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_plan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Plan zajęć"
