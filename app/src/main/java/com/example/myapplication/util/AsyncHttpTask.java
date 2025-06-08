@@ -1,35 +1,52 @@
 package com.example.myapplication.util;
 
-import java.io.IOException;
-
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-class AsyncHttpTask {
-    private static final String backendConstantURL = "10.0.0.127:7070/api"; // tymczasowy wireguard ip
-    public String get(String endpoint) throws IOException {
-        OkHttpClient client = new OkHttpClient();
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
 
-        Request request = new Request.Builder()
-                .url(backendConstantURL + endpoint)
+public class AsyncHttpTask {
+    private static final String BASE_URL = "http://10.0.0.127:7070/api";
+    private final OkHttpClient client = new OkHttpClient();
+    private final Gson gson = new Gson();
+    private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+
+    public <T> T get(String endpoint, Type type) throws IOException {
+        Request req = new Request.Builder()
+                .url(BASE_URL + endpoint)
                 .build();
-
-        //todo: dodac serializacje dla danychz mysql
-        try (Response response = client.newCall(request).execute()) {
-            return response.body().string();
+        try (Response res = client.newCall(req).execute()) {
+            if (!res.isSuccessful()) throw new IOException("HTTP " + res.code());
+            return gson.fromJson(res.body().string(), type);
         }
     }
 
-    public boolean post(String endpoint, RequestBody body) throws IOException {
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(backendConstantURL + endpoint)
+    public boolean post(String endpoint, Object data) throws IOException {
+        String json = gson.toJson(data);
+        RequestBody body = RequestBody.create(json, JSON);
+        Request req = new Request.Builder()
+                .url(BASE_URL + endpoint)
                 .post(body)
                 .build();
-        try (Response response = client.newCall(request).execute()) {
-            return response.isSuccessful();
+        try (Response res = client.newCall(req).execute()) {
+            return res.isSuccessful();
+        }
+    }
+
+    public boolean delete(String endpoint) throws IOException {
+        Request req = new Request.Builder()
+                .url(BASE_URL + endpoint)
+                .delete()
+                .build();
+        try (Response res = client.newCall(req).execute()) {
+            return res.isSuccessful();
         }
     }
 }
