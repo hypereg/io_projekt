@@ -166,37 +166,5 @@ public class EdokumentController {
         ctx.json(list);
     }
 
-    public static void generateOcenyPdf(Context ctx) throws SQLException {
-
-        // prototyp generowania pdfa ocen
-        int userId = Integer.parseInt(ctx.queryParam("uzytkownik_id"));
-        List<Map<String, Object>> oceny = new ArrayList<>();
-
-        try (Connection conn = Database.getDataSource().getConnection();
-             PreparedStatement ps = conn.prepareStatement("SELECT * FROM Oceny WHERE uzytkownik_id = ?")) {
-            ps.setInt(1, userId);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                Map<String, Object> ocena = new HashMap<>();
-                ocena.put("przedmiot", rs.getString("przedmiot"));
-                ocena.put("ocena", rs.getDouble("ocena"));
-                ocena.put("data", rs.getDate("data"));
-                oceny.add(ocena);
-            }
-        }
-//TODO: PRZENIES PDF DO OSOBNEJ KLASY ZROB TO OBIEKTOWO
-        try (ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream()) {
-            Document document = new Document();
-            // dodac implementacje pdf
-
-            PdfWriter pdfWriter = new PdfWriter("sigma pdf");
-            //
-            System.out.println(pdfWriter.getCompressionLevel());
-            ctx.contentType("application/pdf");
-            ctx.result(byteArrayOutputStream.toByteArray());
-        } catch (Exception e) {
-        ctx.status(500).result("blad generaaaaaaaaacji: " + e.getMessage());
-        }
-    }
 }
 
