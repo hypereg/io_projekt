@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Spinner
+        android:id="@+id/spinnerSubjects"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/editTextGradeValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ocena (np. 5.0)"
+        android:inputType="numberDecimal"/>
+
+    <EditText
+        android:id="@+id/editTextGradeDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data (np. 2024-06-01)"/>
+
+    <EditText
+        android:id="@+id/editTextGradeDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Opis"/>
+</LinearLayout>
