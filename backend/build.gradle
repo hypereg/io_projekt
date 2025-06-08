@@ -18,9 +18,21 @@ dependencies {
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
     implementation("com.zaxxer:HikariCP:6.3.0")
+    implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("org.slf4j:slf4j-simple:2.0.16")
     implementation("com.itextpdf:itext7-core:7.2.3")
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
 }
 
 test {
     useJUnitPlatform()
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_18
+    targetCompatibility = JavaVersion.VERSION_18
 }
