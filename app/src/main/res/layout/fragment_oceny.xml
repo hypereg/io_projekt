@@ -26,7 +26,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@android:color/transparent"
-        android:padding="8dp">
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
 
         <Button
             android:id="@+id/button_add_grade"
@@ -35,7 +38,8 @@
             android:layout_weight="1"
             android:text="Dodaj ocenę"
             android:textColor="#3A3A3A"
-            android:background="@android:color/transparent"/>
+            style="@style/MaterialButton.Kafelek"
+            android:layout_marginEnd="8dp"/>
 
         <Button
             android:id="@+id/button_remove_grade"
@@ -44,6 +48,7 @@
             android:layout_weight="1"
             android:text="Usuń ocenę"
             android:textColor="#3A3A3A"
-            android:background="@android:color/transparent"/>
+            style="@style/MaterialButton.Kafelek"
+            android:layout_marginStart="8dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
