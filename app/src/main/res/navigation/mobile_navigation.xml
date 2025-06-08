@@ -24,14 +24,14 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_zad"
+        android:id="@+id/navigation_zadania"
         android:name="com.example.myapplication.ui.zadania.ZadaniaFragment"
         android:label="@string/title_zad"
         tools:layout="@layout/fragment_zadania" />
 
     <fragment
-        android:id="@+id/navigation_menu"
+        android:id="@+id/navigation_oceny"
         android:name="com.example.myapplication.ui.oceny.OcenyFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:label="@string/title_oceny"
+        tools:layout="@layout/fragment_oceny" />
 </navigation>
