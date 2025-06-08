@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Dotychczasowy LinearLayout z całą zawartością -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -72,7 +71,6 @@
 
     </LinearLayout>
 
-    <!-- Przycisk Dzisiaj w prawym dolnym rogu -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_today"
         android:layout_width="wrap_content"
