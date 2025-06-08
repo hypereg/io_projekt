@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.graphics.Rect;
@@ -15,6 +16,8 @@ import com.example.myapplication.databinding.FragmentDashboardBinding;
 import com.example.myapplication.ui.oceny.Ocena;
 import com.example.myapplication.ui.oceny.OcenyAdapter;
 import com.example.myapplication.ui.wiadomosc.Wiadomosc;
+import com.example.myapplication.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +67,15 @@ public class DashboardFragment extends Fragment {
         com.example.myapplication.ui.wiadomosc.WiadomoscAdapter ogloszeniaAdapter = new com.example.myapplication.ui.wiadomosc.WiadomoscAdapter(listaOgloszen);
         recyclerViewOgloszenia.setAdapter(ogloszeniaAdapter);
 
+        binding.textOceny.setOnClickListener(v ->
+            ((BottomNavigationView) requireActivity().findViewById(R.id.nav_view)).setSelectedItemId(R.id.navigation_oceny)
+        );
+        binding.textWiadomosci.setOnClickListener(v ->
+            ((BottomNavigationView) requireActivity().findViewById(R.id.nav_view)).setSelectedItemId(R.id.navigation_wiadomosc)
+        );
+        binding.textPlan.setOnClickListener(v ->
+            ((BottomNavigationView) requireActivity().findViewById(R.id.nav_view)).setSelectedItemId(R.id.navigation_plan)
+        );
 
 //        final TextView textView = binding.textDashboard;
 //        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
