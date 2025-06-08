@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_mail"
-        android:name="com.example.myapplication.ui.plan.PlanFragment"
+        android:name="com.example.myapplication.ui.wiadomosc.WiadomoscFragment"
         android:label="@string/title_mail"
         tools:layout="@layout/fragment_mail" />
 

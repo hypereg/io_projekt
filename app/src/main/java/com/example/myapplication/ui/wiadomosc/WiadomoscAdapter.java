@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.ogloszenie;
+package com.example.myapplication.ui.wiadomosc;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,10 +13,10 @@ import com.example.myapplication.R;
 
 import java.util.List;
 
-public class OgloszenieAdapter extends RecyclerView.Adapter<OgloszenieAdapter.ViewHolder> {
-    private List<Ogloszenie> ogloszenia;
+public class WiadomoscAdapter extends RecyclerView.Adapter<WiadomoscAdapter.ViewHolder> {
+    private List<Wiadomosc> ogloszenia;
 
-    public OgloszenieAdapter(List<Ogloszenie> ogloszenia) {
+    public WiadomoscAdapter(List<Wiadomosc> ogloszenia) {
         this.ogloszenia = ogloszenia;
     }
 
@@ -30,11 +30,11 @@ public class OgloszenieAdapter extends RecyclerView.Adapter<OgloszenieAdapter.Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Ogloszenie ogloszenie = ogloszenia.get(position);
+        Wiadomosc wiadomosc = ogloszenia.get(position);
 
-        holder.title.setText(ogloszenie.getTitle());
-        holder.sender.setText(ogloszenie.getSender());
-        holder.message.setText(ogloszenie.getMessage());
+        holder.title.setText(wiadomosc.getTitle());
+        holder.sender.setText(wiadomosc.getSender());
+        holder.message.setText(wiadomosc.getMessage());
 
         holder.arrow.setOnClickListener(new View.OnClickListener() {
             private boolean expanded = false;

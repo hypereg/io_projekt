@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.ogloszenie;
+package com.example.myapplication.ui.wiadomosc;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -9,13 +9,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.example.myapplication.R;
 
-public class OgloszenieTileView extends LinearLayout {
+public class WiadomoscTileView extends LinearLayout {
 
     private boolean expanded = false;
     private TextView message;
     private ImageView arrow;
 
-    public OgloszenieTileView(Context context, AttributeSet attrs) {
+    public WiadomoscTileView(Context context, AttributeSet attrs) {
         super(context, attrs);
         LayoutInflater.from(context).inflate(R.layout.ogloszenie_item, this, true);
 
