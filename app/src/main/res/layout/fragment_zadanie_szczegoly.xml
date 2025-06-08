@@ -17,11 +17,13 @@
         android:gravity="center_vertical">
         <ImageButton
             android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@android:drawable/ic_media_previous"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/arrow_right"
             android:background="@android:color/transparent"
-            android:contentDescription="Powrót" />
+            android:contentDescription="Powrót"
+            android:rotation="90"
+            android:scaleType="fitCenter" />
         <TextView
             android:id="@+id/tytul_zadania"
             android:layout_width="wrap_content"
@@ -62,19 +64,18 @@
         android:orientation="horizontal"
         android:gravity="end"
         android:layout_marginTop="32dp">
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_zalacz_pliki"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Załącz pliki" />
-        <Button
+            android:text="Załącz pliki"
+            style="@style/MaterialButton.Kafelek" />
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_oddaj_zadanie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Oddaj zadanie"
-            android:layout_marginStart="16dp" />
+            android:layout_marginStart="16dp"
+            style="@style/MaterialButton.Kafelek" />
     </LinearLayout>
 </LinearLayout>
-
-
-
