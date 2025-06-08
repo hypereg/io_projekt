@@ -32,11 +32,31 @@ public class ZadanieSzczegolyActivity extends AppCompatActivity {
 
         tytul.setText(zadanie.getTemat());
         termin.setText("Termin: " + zadanie.getDataWykonania());
-        status.setText("Status: " + zadanie.getStatus().name());
         opis.setText(zadanie.getOpis());
+
+        String statusText;
+        String btnOddajText;
+        switch (zadanie.getStatus()) {
+            case PRZYSZLE:
+                statusText = "Nie oddane";
+                btnOddajText = "Oddaj";
+                break;
+            case ZALEGLE:
+                statusText = "Nie oddane";
+                btnOddajText = "Oddaj po czasie";
+                break;
+            case UKONCZONE:
+                statusText = "Oddane";
+                btnOddajText = "Oddane";
+                break;
+            default:
+                statusText = "-";
+                btnOddajText = "Oddaj";
+        }
+        status.setText("Status: " + statusText);
+        btnOddaj.setText(btnOddajText);
 
         backBtn.setOnClickListener(v -> finish());
         // btnZalacz i btnOddaj - obsługa do uzupełnienia
     }
 }
-

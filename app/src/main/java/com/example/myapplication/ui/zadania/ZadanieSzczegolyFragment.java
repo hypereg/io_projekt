@@ -42,11 +42,29 @@ public class ZadanieSzczegolyFragment extends Fragment {
 
         tytul.setText(zadanie.getTemat());
         termin.setText("Termin: " + zadanie.getDataWykonania());
-        status.setText("Status: " + zadanie.getStatus().name());
+        String statusText;
+        String btnOddajText;
+        switch (zadanie.getStatus()) {
+            case PRZYSZLE:
+                statusText = "Nie oddane";
+                btnOddajText = "Oddaj";
+                break;
+            case ZALEGLE:
+                statusText = "Nie oddane";
+                btnOddajText = "Oddaj po czasie";
+                break;
+            case UKONCZONE:
+                statusText = "Oddane";
+                btnOddajText = "Oddane";
+                break;
+            default:
+                statusText = "-";
+                btnOddajText = "Oddaj";
+        }
+        status.setText("Status: " + statusText);
+        btnOddaj.setText(btnOddajText);
         opis.setText(zadanie.getOpis());
 
         backBtn.setOnClickListener(v -> requireActivity().onBackPressed());
-        // btnZalacz i btnOddaj - obsługa do uzupełnienia
     }
 }
-
