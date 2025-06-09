@@ -10,7 +10,7 @@ public class Database {
 
     static {
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/betterdziekanat");
+        config.setJdbcUrl("jdbc:mysql://10.0.0.127:3306/betterdziekanat");
         config.setUsername("root");
         config.setPassword("Kebab123");
         config.addDataSourceProperty("characterEncoding", "utf8");
