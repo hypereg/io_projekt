@@ -7,9 +7,9 @@
         android:title="@string/title_plan" />
 
     <item
-        android:id="@+id/navigation_mail"
+        android:id="@+id/navigation_wiadomosc"
         android:icon="@drawable/mail"
-        android:title="@string/title_mail" />
+        android:title="@string/title_wiadomosc" />
 
     <item
         android:id="@+id/navigation_dashboard"
@@ -17,13 +17,13 @@
         android:title="@string/title_dashboard" />
 
     <item
-        android:id="@+id/navigation_zad"
+        android:id="@+id/navigation_zadania"
         android:icon="@drawable/square"
         android:title="@string/title_zad" />
 
     <item
-        android:id="@+id/navigation_menu"
-        android:icon="@drawable/menu"
-        android:title="@string/title_menu" />
+        android:id="@+id/navigation_oceny"
+        android:icon="@drawable/oceny"
+        android:title="@string/title_oceny" />
 
 </menu>

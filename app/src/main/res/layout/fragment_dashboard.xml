@@ -26,6 +26,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_oceny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nowe oceny"
@@ -52,16 +53,17 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_wiadomosci"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ogłoszenia"
+                android:text="Wiadomości"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginBottom="15dp"
                 android:textColor="@color/black" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/ogloszeniaRecyclerView"
+                android:id="@+id/wiadomosciRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:nestedScrollingEnabled="false"
@@ -78,6 +80,7 @@
             android:layout_marginTop="16dp">
 
             <TextView
+                android:id="@+id/text_plan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Plan zajęć"

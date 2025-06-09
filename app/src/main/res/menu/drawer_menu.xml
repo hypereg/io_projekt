@@ -1,14 +1,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_home"
+        android:id="@+id/navigation_dashboard"
         android:icon="@drawable/home"
-        android:title="Strona główna" />
+        android:title="@string/title_dashboard" />
     <item
-        android:id="@+id/nav_grades"
-        android:icon="@drawable/square"
-        android:title="Oceny" />
+        android:id="@+id/navigation_plan"
+        android:icon="@drawable/calendar"
+        android:title="@string/title_plan" />
     <item
-        android:id="@+id/nav_announcement"
+        android:id="@+id/navigation_wiadomosc"
         android:icon="@drawable/mail"
-        android:title="Ogłoszenia" />
+        android:title="@string/title_wiadomosc" />
+    <item
+        android:id="@+id/navigation_zadania"
+        android:icon="@drawable/square"
+        android:title="@string/title_zad" />
+    <item
+        android:id="@+id/navigation_oceny"
+        android:icon="@drawable/oceny"
+        android:title="@string/title_oceny" />
 </menu>

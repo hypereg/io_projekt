@@ -1,10 +1,9 @@
 <resources>
     <string name="app_name">BetterDziekanat</string>
-    <string name="title_mail">Wiadomości</string>
+    <string name="title_wiadomosc">Wiadomości</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_zad">Zadania</string>
     <string name="title_menu">Menu</string>
     <string name="title_plan">Plan zajęć</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_oceny">Oceny</string>
 </resources>

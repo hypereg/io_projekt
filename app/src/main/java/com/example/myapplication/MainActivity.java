@@ -58,23 +58,33 @@ public class MainActivity extends AppCompatActivity {
         });
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(item -> {
-            int id = item.getItemId();
-            // obsługa kliknięć w menu bocznym
-            drawerLayout.closeDrawer(GravityCompat.START);
-            return true;
+        ViewCompat.setOnApplyWindowInsetsListener(navigationView, (v, insets) -> {
+            int top = insets.getInsets(WindowInsetsCompat.Type.systemBars()).top;
+            v.setPadding(
+                    v.getPaddingLeft(),
+                    top,
+                    v.getPaddingRight(),
+                    v.getPaddingBottom()
+            );
+            return insets;
         });
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_plan,
-                R.id.navigation_mail,
+                R.id.navigation_wiadomosc,
                 R.id.navigation_dashboard,
-                R.id.navigation_zad,
-                R.id.navigation_menu)
+                R.id.navigation_zadania,
+                R.id.navigation_oceny)
                 .build();
 
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(navigationView, navController);
+        navigationView.setNavigationItemSelectedListener(item -> {
+            boolean handled = NavigationUI.onNavDestinationSelected(item, navController);
+            drawerLayout.closeDrawer(GravityCompat.START);
+            return handled;
+        });
     }
 }

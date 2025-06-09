@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/smallkafelek"
+    android:padding="10dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/zajecie_nazwa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            style="@style/ItemTitle" />
+
+        <TextView
+            android:id="@+id/zajecie_prowadzacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ItemOpis" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/zajecie_godzina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ItemOpis" />
+
+        <TextView
+            android:id="@+id/zajecie_sala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ItemOpis" />
+    </LinearLayout>
+</LinearLayout>
+
